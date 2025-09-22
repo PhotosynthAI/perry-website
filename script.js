@@ -74,10 +74,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Button click handlers
 document.addEventListener('DOMContentLoaded', function() {
-    // Primary CTA buttons
+    // Primary CTA buttons (excluding mailto links)
     const primaryButtons = document.querySelectorAll('.btn-primary');
     primaryButtons.forEach(button => {
         button.addEventListener('click', function(e) {
+            // Allow mailto links to work normally
+            if (this.href && this.href.startsWith('mailto:')) {
+                return; // Let the default behavior happen
+            }
             e.preventDefault();
             // Add your signup/trial logic here
             console.log('Primary CTA clicked');
