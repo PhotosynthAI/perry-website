@@ -163,6 +163,13 @@ p {
     cursor: pointer;
 }
 
+/* Hide floating logo on mobile to prevent overlap */
+@media (max-width: 768px) {
+    .floating-logo {
+        display: none;
+    }
+}
+
 .floating-logo:hover {
     transform: rotate(180deg);
 }
