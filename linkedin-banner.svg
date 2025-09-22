@@ -12,7 +12,7 @@
     <rect width="1128" height="191" fill="url(#bgGradient)"/>
     
     <!-- Logo -->
-    <g transform="translate(60, 50) scale(3.5)">
+    <g transform="translate(400, 30) scale(3.5)">
         <!-- Infinity symbol -->
         <path d="M6 8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.21-1.79 4-4 4s-4-1.79-4-4z" fill="none" stroke="#2563eb" stroke-width="3"/>
         <path d="M14 16c0-2.21-1.79-4-4-4s-4 1.79-4 4c0 2.21 1.79 4 4 4s4-1.79 4-4z" fill="none" stroke="#2563eb" stroke-width="3"/>
@@ -21,13 +21,13 @@
     </g>
     
     <!-- Perry AI Text -->
-    <text x="200" y="95" font-family="Playfair Display, serif" font-size="56" font-weight="700" fill="#2d3748">Perry AI</text>
+    <text x="564" y="95" font-family="Playfair Display, serif" font-size="56" font-weight="700" fill="#2d3748" text-anchor="middle">Perry AI</text>
     
     <!-- by Photosynth Text -->
-    <text x="200" y="130" font-family="Inter, sans-serif" font-size="20" font-weight="400" fill="#718096">by Photosynth</text>
+    <text x="564" y="130" font-family="Inter, sans-serif" font-size="20" font-weight="400" fill="#718096" text-anchor="middle">by Photosynth</text>
     
     <!-- Tagline -->
-    <text x="200" y="160" font-family="Inter, sans-serif" font-size="18" font-weight="400" fill="#6b7280">AI Powered Legal Automation for Private Funds</text>
+    <text x="564" y="160" font-family="Inter, sans-serif" font-size="18" font-weight="400" fill="#6b7280" text-anchor="middle">AI Powered Legal Automation for Private Funds</text>
     
     <!-- Decorative elements -->
     <circle cx="1000" cy="50" r="30" fill="#2563eb" opacity="0.1"/>

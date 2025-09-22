@@ -717,7 +717,7 @@ p {
 
 .domain-card {
     top: 50%;
-    right: -20px;
+    right: 10px;
     transform: translateY(-50%);
     animation-delay: 2s;
 }
@@ -989,7 +989,7 @@ p {
     }
     
     .domain-card {
-        right: -50px;
+        right: 5px;
     }
     
     .card-title {
