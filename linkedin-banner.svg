@@ -1,0 +1,36 @@
+<svg viewBox="0 0 1128 191" width="1128" height="191" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background gradient -->
+    <defs>
+        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fef7ed;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#fed7aa;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#fdba74;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="1128" height="191" fill="url(#bgGradient)"/>
+    
+    <!-- Logo -->
+    <g transform="translate(60, 50) scale(3.5)">
+        <!-- Infinity symbol -->
+        <path d="M6 8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.21-1.79 4-4 4s-4-1.79-4-4z" fill="none" stroke="#2563eb" stroke-width="3"/>
+        <path d="M14 16c0-2.21-1.79-4-4-4s-4 1.79-4 4c0 2.21 1.79 4 4 4s4-1.79 4-4z" fill="none" stroke="#2563eb" stroke-width="3"/>
+        <path d="M10 8c0-1.1.9-2 2-2s2 .9 2 2c0 1.1-.9 2-2 2s-2-.9-2-2z" fill="#2563eb"/>
+        <path d="M10 16c0-1.1-.9-2-2-2s-2 .9-2 2c0 1.1.9 2 2 2s2-.9 2-2z" fill="#2563eb"/>
+    </g>
+    
+    <!-- Perry AI Text -->
+    <text x="200" y="95" font-family="Playfair Display, serif" font-size="56" font-weight="700" fill="#2d3748">Perry AI</text>
+    
+    <!-- by Photosynth Text -->
+    <text x="200" y="130" font-family="Inter, sans-serif" font-size="20" font-weight="400" fill="#718096">by Photosynth</text>
+    
+    <!-- Tagline -->
+    <text x="200" y="160" font-family="Inter, sans-serif" font-size="18" font-weight="400" fill="#6b7280">AI Powered Legal Automation for Private Funds</text>
+    
+    <!-- Decorative elements -->
+    <circle cx="1000" cy="50" r="30" fill="#2563eb" opacity="0.1"/>
+    <circle cx="1050" cy="120" r="20" fill="#2563eb" opacity="0.15"/>
+    <circle cx="950" cy="150" r="25" fill="#2563eb" opacity="0.08"/>
+</svg>

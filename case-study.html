@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies - Perry AI by Photosynth</title>
+    <link rel="stylesheet" href="styles.css?v=31">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e6f2ff 0%, #f0f8ff 100%);
+            min-height: 100vh;
+        }
+        
+        .case-study-page {
+            padding: 80px 0;
+            min-height: 100vh;
+            background: transparent;
+            color: #1a1a1a;
+        }
+        
+        .case-study-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .case-study-section {
+            margin-bottom: 100px;
+            position: relative;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .background-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 8rem;
+            font-weight: bold;
+            color: rgba(37, 99, 235, 0.1);
+            user-select: none;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .case-study-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .case-study-title {
+            font-size: 3rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .case-study-title .highlight {
+            color: #2563eb;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .stat-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 8px;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2563eb;
+            margin-bottom: 4px;
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: #666;
+            text-align: center;
+            line-height: 1.2;
+        }
+        
+        .attributes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .attribute-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #f9fafb;
+            border-radius: 8px;
+            padding: 16px;
+        }
+        
+        .attribute-icon {
+            width: 20px;
+            height: 20px;
+            color: #2563eb;
+        }
+        
+        .attribute-label {
+            font-size: 0.75rem;
+            color: #666;
+        }
+        
+        .attribute-value {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-left: 4px;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            margin-top: 40px;
+        }
+        
+        .section-content {
+            color: #374151;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        
+        .progress-container {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .progress-label {
+            color: #374151;
+            width: 80px;
+        }
+        
+        .progress-bar {
+            flex: 1;
+            height: 24px;
+            background: #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #2563eb;
+            border-radius: 12px;
+            transition: width 0.3s ease;
+        }
+        
+        .progress-value {
+            font-weight: bold;
+            margin-left: 8px;
+        }
+        
+        .progress-value.perry {
+            color: #2563eb;
+        }
+        
+        .progress-value.other {
+            color: #1a1a1a;
+        }
+        
+        .comparison-note {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 32px;
+        }
+        
+        .why-perry-list {
+            list-style: decimal;
+            padding-left: 24px;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+        
+        .why-perry-list li {
+            margin-bottom: 8px;
+        }
+        
+        .why-perry-list .highlight {
+            font-weight: 600;
+            color: #2563eb;
+        }
+        
+        .about-perry {
+            margin-top: 32px;
+            color: #374151;
+        }
+        
+        .about-perry .highlight {
+            font-weight: 600;
+            color: #2563eb;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 40px;
+            color: #666;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: #333;
+            background: #f9fafb;
+        }
+        
+        @media (max-width: 768px) {
+            .case-study-title {
+                font-size: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .attributes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .background-number {
+                font-size: 6rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .background-number {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="case-study-page">
+        <div class="case-study-container">
+            <a href="index.html" class="back-link">← Back to Perry AI</a>
+            
+            <!-- LPA Stress-Test Section -->
+            <div id="lpa-section" class="case-study-section">
+                <div class="background-number">+53%</div>
+                <div class="case-study-content">
+                    <h1 class="case-study-title">Perry Internal Benchmark: <span class="highlight">LPA Stress‑Test</span></h1>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">🕒</div>
+                            <div class="stat-value">3 min 22 s</div>
+                            <div class="stat-label">Perry first-draft turnaround</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📈</div>
+                            <div class="stat-value">+53%</div>
+                            <div class="stat-label">Issues found vs. competing AI</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">💰</div>
+                            <div class="stat-value">$27.8m</div>
+                            <div class="stat-label">Value-at-risk identified</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">✂️</div>
+                            <div class="stat-value">40%</div>
+                            <div class="stat-label">Drafting time saved</div>
+                        </div>
+                    </div>
+                    
+                    <div class="attributes-grid">
+                        <div class="attribute-card">
+                            <svg class="attribute-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <path d="M9 9h6v6H9z"/>
+                            </svg>
+                            <span class="attribute-label">Test Type:</span>
+                            <span class="attribute-value">Internal Benchmark</span>
+                        </div>
+                        <div class="attribute-card">
+                            <svg class="attribute-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                            </svg>
+                            <span class="attribute-label">Document:</span>
+                            <span class="attribute-value">Flagship real-estate LPA</span>
+                        </div>
+                        <div class="attribute-card">
+                            <svg class="attribute-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            <span class="attribute-label">Date:</span>
+                            <span class="attribute-value">30 June 2025</span>
+                        </div>
+                        <div class="attribute-card">
+                            <svg class="attribute-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18"/>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                            </svg>
+                            <span class="attribute-label">Comparison:</span>
+                            <span class="attribute-value">Perry vs. Competing AI</span>
+                        </div>
+                    </div>
+                    
+                    <h2 class="section-title">Objective</h2>
+                    <div class="section-content">We benchmarked Perry LPA AI-Analyzer against a top competitor to measure incremental value.</div>
+                    
+                    <h2 class="section-title">Methodology</h2>
+                    <div class="section-content">Baseline pass with a competing AI tool (17 issues). Second pass with Perry (26 issues, replacement wording). Side-by-side comparison of coverage, economic exposure flagged, and drafting effort required.</div>
+                    
+                    <h2 class="section-title">Inside the Numbers</h2>
+                    <div class="progress-container">
+                        <span class="progress-label">Perry</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%"></div>
+                        </div>
+                        <span class="progress-value perry">26</span>
+                    </div>
+                    <div class="progress-container">
+                        <span class="progress-label">Other</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                        <span class="progress-value other">17</span>
+                    </div>
+                    <div class="comparison-note">Perry surfaced 53% more issues than the competing AI tool.</div>
+                    
+                    <h2 class="section-title">Why Perry Wins</h2>
+                    <ol class="why-perry-list">
+                        <li><span class="highlight">Deep clause intelligence:</span> understands niche LPA nuances like subscription‑line carve‑outs and claw‑back triggers.</li>
+                        <li><span class="highlight">Economic modelling engine:</span> converts legal wording into dollar impacts that resonate with investment committees.</li>
+                        <li><span class="highlight">Negotiation‑ready output:</span> replacement text arrives formatted for instant pasting into blacklines — no post‑processing.</li>
+                        <li><span class="highlight">Risk‑weighted prioritisation:</span> ensures reviewers tackle value‑drivers first, not alphabetic clause order.</li>
+                    </ol>
+                    
+                    <div class="about-perry">
+                        <strong class="highlight">About Perry:</strong> Perry harnesses specialist‑trained large‑language models to de‑risk private‑markets documentation. From LPAs to side‑letters, we surface, quantify and fix the issues that move the needle on returns.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Term-Sheet Stress-Test Section -->
+            <div id="term-sheet-section" class="case-study-section">
+                <div class="background-number">+20%</div>
+                <div class="case-study-content">
+                    <h1 class="case-study-title">Perry Internal Benchmark: <span class="highlight">Term‑Sheet Stress‑Test</span></h1>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">🕒</div>
+                            <div class="stat-value">2 min 15 s</div>
+                            <div class="stat-label">Perry first-draft turnaround</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📈</div>
+                            <div class="stat-value">+20%</div>
+                            <div class="stat-label">Issues found vs. competing AI</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🚩</div>
+                            <div class="stat-value">Top‑3</div>
+                            <div class="stat-label">Risk Banner</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">✂️</div>
+                            <div class="stat-value">35%</div>
+                            <div class="stat-label">Drafting time saved</div>
+                        </div>
+                    </div>
+                    
+                    <div class="attributes-grid">
+                        <div class="attribute-card">
+                            <svg class="attribute-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <path d="M9 9h6v6H9z"/>
+                            </svg>
+                            <span class="attribute-label">Test Type:</span>
+                            <span class="attribute-value">Internal Benchmark</span>
+                        </div>
+                        <div class="attribute-card">
+                            <svg class="attribute-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                            </svg>
+                            <span class="attribute-label">Document:</span>
+                            <span class="attribute-value">Growth-equity term sheet</span>
+                        </div>
+                        <div class="attribute-card">
+                            <svg class="attribute-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            <span class="attribute-label">Date:</span>
+                            <span class="attribute-value">30 June 2025</span>
+                        </div>
+                        <div class="attribute-card">
+                            <svg class="attribute-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18"/>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                            </svg>
+                            <span class="attribute-label">Comparison:</span>
+                            <span class="attribute-value">Perry vs. Competing AI</span>
+                        </div>
+                    </div>
+                    
+                    <h2 class="section-title">Objective</h2>
+                    <div class="section-content">We benchmarked Perry Term-Sheet AI-Analyzer against a top competitor to measure incremental negotiating leverage on a real-world Indian VC term sheet.</div>
+                    
+                    <h2 class="section-title">Methodology</h2>
+                    <div class="section-content">Baseline pass with a competing AI tool (25 issues). Second pass with Perry (30 issues, replacement wording, risk ranking). Side-by-side comparison of coverage, economic exposure flagged, and drafting effort required.</div>
+                    
+                    <h2 class="section-title">Inside the Numbers</h2>
+                    <div class="progress-container">
+                        <span class="progress-label">Perry</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%"></div>
+                        </div>
+                        <span class="progress-value perry">30</span>
+                    </div>
+                    <div class="progress-container">
+                        <span class="progress-label">Other</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 83%"></div>
+                        </div>
+                        <span class="progress-value other">25</span>
+                    </div>
+                    <div class="comparison-note">Perry surfaced 20% more issues than the competing AI tool. Top-3 risk banner, 24 replacement clauses, 35% drafting time saved.</div>
+                    
+                    <h2 class="section-title">Why Perry Wins</h2>
+                    <ol class="why-perry-list">
+                        <li><span class="highlight">Deeper clause intelligence:</span> understands local regulatory quirks like buy‑back reserve limits and quorum fallbacks.</li>
+                        <li><span class="highlight">Economic modelling engine:</span> converts valuation ambiguity and fee caps into rupee impacts investors can model.</li>
+                        <li><span class="highlight">Negotiation‑ready output:</span> replacement text arrives copy‑and‑paste‑ready, accelerating black‑line drafting.</li>
+                        <li><span class="highlight">Risk‑weighted presentation:</span> Top‑3 banner ensures partners focus on value drivers first.</li>
+                    </ol>
+                    
+                    <div class="about-perry">
+                        <strong class="highlight">About Perry:</strong> Perry uses specialist large‑language models to uncover, quantify and remediate hidden risks in private‑markets documentation – from venture‑capital term sheets to LPAs and side letters.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Auto-scroll to the correct section based on URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const caseType = urlParams.get('case');
+            
+            if (caseType === 'term-sheet') {
+                document.getElementById('term-sheet-section').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            } else if (caseType === 'lpa') {
+                document.getElementById('lpa-section').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    </script>
+</body>
+</html>
