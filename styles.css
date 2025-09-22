@@ -1554,11 +1554,51 @@ p {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 24px;
+    }
+    
+    .hero-content {
+        gap: 3rem;
+    }
+    
+    .hero-stats {
+        gap: 2.5rem;
+    }
+    
+    .documents-visual {
+        gap: 3rem;
+    }
+    
+    .perry-learns-grid {
+        gap: 3rem;
+    }
+    
+    .metaphor-content {
+        gap: 3rem;
+    }
+    
+    .comparison-grid {
+        gap: 3rem;
+    }
+}
+
 @media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .hero {
+        padding-top: 100px;
+        min-height: auto;
+        padding-bottom: 4rem;
+    }
+    
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 2rem;
+        gap: 2.5rem;
     }
     
     .hero-visual {
@@ -1567,21 +1607,57 @@ p {
     
     .device-frame {
         transform: none;
+        padding: 16px;
     }
     
     .dashboard-mockup {
-        width: 300px;
-        height: 225px;
+        width: 280px;
+        height: 210px;
+    }
+    
+    .hero-headline {
+        font-size: clamp(2rem, 8vw, 3rem);
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subheadline {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-stats {
+        gap: 1.5rem;
+        margin-top: 2rem;
+        padding: 1.5rem 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .stat-item {
+        min-width: 120px;
+    }
+    
+    .stat-value {
+        font-size: 1.75rem;
+    }
+    
+    .stat-label {
+        font-size: 0.85rem;
+        line-height: 1.2;
     }
     
     .perry-learns-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
+    }
+    
+    .learn-card {
+        padding: 2rem;
     }
     
     .metaphor-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
     }
     
     .comparison-grid {
@@ -1589,37 +1665,49 @@ p {
         gap: 2rem;
     }
     
+    .comparison-column {
+        padding: 2rem;
+    }
+    
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: 1.5rem;
     }
     
     .footer-middle {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 1.5rem;
     }
     
     .hero-ctas {
         justify-content: center;
     }
     
-    .hero-stats {
-        gap: 1.5rem;
-        margin-top: 1.5rem;
-        padding: 1rem 0;
-    }
-    
-    .stat-value {
-        font-size: 1.5rem;
-    }
-    
-    .stat-label {
-        font-size: 0.8rem;
-    }
-    
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+    }
+    
+    .cta-content h2 {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+        margin-bottom: 2rem;
+    }
+    
+    .closing-cta {
+        padding: 4rem 0;
+    }
+    
+    .btn {
+        min-height: 48px;
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+    
+    .btn-large {
+        padding: 18px 36px;
+        font-size: 1.1rem;
     }
 }
 
@@ -1630,19 +1718,167 @@ p {
     
     .hero {
         padding-top: 100px;
+        padding-bottom: 3rem;
+    }
+    
+    .hero-headline {
+        font-size: clamp(1.75rem, 10vw, 2.5rem);
+        line-height: 1.1;
+    }
+    
+    .hero-subheadline {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-stats {
+        gap: 1rem;
+        margin-top: 1.5rem;
+        padding: 1rem 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat-item {
+        min-width: 100px;
+    }
+    
+    .stat-value {
+        font-size: 1.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .device-frame {
+        padding: 12px;
+    }
+    
+    .dashboard-mockup {
+        width: 260px;
+        height: 195px;
     }
     
     .testimonials-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
+    .testimonial-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .testimonial-quote {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .testimonial-author {
+        font-size: 0.85rem;
+    }
     
     .learn-card {
-        padding: 2rem;
+        padding: 1.5rem;
+    }
+    
+    .learn-visual {
+        height: 150px;
     }
     
     .comparison-column {
-        padding: 2rem;
+        padding: 1.5rem;
+    }
+    
+    .comparison-item {
+        margin-bottom: 0.75rem;
+        padding: 0.25rem 0;
+    }
+    
+    .btn {
+        min-height: 44px;
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+    
+    .btn-large {
+        padding: 16px 32px;
+        font-size: 1rem;
+    }
+    
+    .header-content {
+        padding: 0.75rem 0;
+    }
+    
+    .logo-text {
+        font-size: 1.5rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .nav {
+        gap: 1rem;
+    }
+    
+    .footer-content {
+        gap: 1rem;
+    }
+    
+    .footer-middle {
+        gap: 1rem;
+    }
+    
+    .footer-link {
+        font-size: 0.9rem;
+    }
+    
+    .closing-cta {
+        padding: 3rem 0;
+    }
+    
+    .cta-content h2 {
+        font-size: clamp(1.25rem, 8vw, 2rem);
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+    /* Improve touch targets */
+    .btn, .case-study-btn, .action-btn, .live-updates-btn {
+        min-height: 48px;
+        min-width: 48px;
+        touch-action: manipulation;
+    }
+    
+    /* Prevent zoom on input focus */
+    input, textarea, select {
+        font-size: 16px;
+    }
+    
+    /* Improve scrolling performance */
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Optimize animations for mobile */
+    .device-frame:hover {
+        transform: none;
+    }
+    
+    .floating-logo:hover {
+        transform: none;
+    }
+    
+    /* Reduce motion for users who prefer it */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
     }
 }
 
@@ -1974,15 +2210,25 @@ html {
     }
     
     .case-study-card {
-        padding: 30px;
+        padding: 30px 20px;
     }
     
     .case-study-numbers {
         gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .number-value {
         font-size: 1.25rem;
+    }
+    
+    .case-study-title {
+        font-size: 1.3rem;
+    }
+    
+    .case-study-subtitle {
+        font-size: 0.85rem;
     }
 }
 
